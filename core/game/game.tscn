@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c48pxp5vv2jet"]
+
+[ext_resource type="Script" uid="uid://crmdb24injh8l" path="res://core/game/game.gd" id="1_4gkfv"]
+[ext_resource type="PackedScene" uid="uid://ho2nveak3mn7" path="res://world/world.tscn" id="1_23swt"]
+[ext_resource type="PackedScene" uid="uid://br151o8u5w341" path="res://ui/hud/hud.tscn" id="2_dfm4s"]
+
+[node name="Game" type="Node3D" unique_id=1309773171]
+script = ExtResource("1_4gkfv")
+
+[node name="World" parent="." unique_id=1301357312 instance=ExtResource("1_23swt")]
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=1736743754]
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig" unique_id=44835537]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 20, 20)
+projection = 1
+current = true
+size = 50.0
+
+[node name="HUD" parent="." unique_id=579940240 instance=ExtResource("2_dfm4s")]

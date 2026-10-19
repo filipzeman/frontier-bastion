@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="VillagerData" format=3 uid="uid://doq2b10hr17hc"]
+
+[ext_resource type="Script" uid="uid://bj80snistvv6v" path="res://village/villagers/villager_data.gd" id="1_xdbkh"]
+
+[resource]
+script = ExtResource("1_xdbkh")
+name = "Sindri"
+age = 27
+profession = 6
+is_founder = true
+default_assignment = 6
+spawn_location = Vector3(-2, 0, 12)
+metadata/_custom_type_script = "uid://bj80snistvv6v"

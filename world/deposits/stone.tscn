@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bcd3qwcga20mq"]
+
+[ext_resource type="Script" uid="uid://c0tisj3nojulg" path="res://world/deposits/gatherable.gd" id="1_wfkmt"]
+[ext_resource type="Resource" uid="uid://d2greoxiqg7r7" path="res://world/deposits/stone.tres" id="2_u0oe3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5o24"]
+albedo_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4717r"]
+material = SubResource("StandardMaterial3D_h5o24")
+size = Vector3(1.5, 1.5, 1.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gn68i"]
+size = Vector3(1.5, 1.5, 1.5)
+
+[node name="Stone" type="StaticBody3D" unique_id=1768938634]
+script = ExtResource("1_wfkmt")
+resource_data = ExtResource("2_u0oe3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1047572898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+mesh = SubResource("BoxMesh_4717r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2514552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("BoxShape3D_gn68i")

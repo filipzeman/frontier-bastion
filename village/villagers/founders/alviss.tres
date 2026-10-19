@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="VillagerData" format=3 uid="uid://cextr075hb0b5"]
+
+[ext_resource type="Script" uid="uid://bj80snistvv6v" path="res://village/villagers/villager_data.gd" id="1_usju0"]
+
+[resource]
+script = ExtResource("1_usju0")
+name = "Alviss"
+age = 51
+profession = 5
+is_founder = true
+spawn_location = Vector3(-7, 0, 10)
+metadata/_custom_type_script = "uid://bj80snistvv6v"

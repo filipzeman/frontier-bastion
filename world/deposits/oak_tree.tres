@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ResourceData" format=3 uid="uid://t4ksl14y8rl0"]
+
+[ext_resource type="Script" uid="uid://cv546u6mhusld" path="res://world/deposits/resource_data.gd" id="1_jr0qa"]
+
+[resource]
+script = ExtResource("1_jr0qa")
+name = "Oak Tree"
+max_amount = 50
+metadata/_custom_type_script = "uid://cv546u6mhusld"

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dhk0q2dwnga5p"]
+
+[ext_resource type="Script" uid="uid://c0tisj3nojulg" path="res://world/deposits/gatherable.gd" id="1_2vajq"]
+[ext_resource type="Resource" uid="uid://t4ksl14y8rl0" path="res://world/deposits/oak_tree.tres" id="2_jb8hv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4sc31"]
+albedo_color = Color(0.2198568, 0.38623384, 0.16551957, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ubtyr"]
+material = SubResource("StandardMaterial3D_4sc31")
+top_radius = 0.0
+bottom_radius = 1.2
+height = 3.0
+cap_top = false
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2vajq"]
+height = 3.0
+radius = 1.2
+
+[node name="Tree" type="StaticBody3D" unique_id=2117255762]
+script = ExtResource("1_2vajq")
+resource_data = ExtResource("2_jb8hv")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1276526451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("CylinderMesh_ubtyr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1369876074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CylinderShape3D_2vajq")

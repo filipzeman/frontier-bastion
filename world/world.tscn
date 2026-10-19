@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ho2nveak3mn7"]
+
+[ext_resource type="Script" uid="uid://choo8kxghs1kf" path="res://world/world.gd" id="1_6xmxd"]
+[ext_resource type="PackedScene" uid="uid://dfn66tkyw4bux" path="res://village/village.tscn" id="2_tcf2h"]
+[ext_resource type="Script" uid="uid://id3ahjme0c2o" path="res://world/world_grid.gd" id="3_4717r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sj5s8"]
+albedo_color = Color(0.23702091, 0.25048858, 0.09015707, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ubtyr"]
+material = SubResource("StandardMaterial3D_sj5s8")
+size = Vector2(100, 100)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ud2q1"]
+
+[sub_resource type="Sky" id="Sky_sj5s8"]
+sky_material = SubResource("ProceduralSkyMaterial_ud2q1")
+
+[sub_resource type="Environment" id="Environment_ubtyr"]
+background_mode = 2
+sky = SubResource("Sky_sj5s8")
+ambient_light_source = 3
+
+[node name="World" type="Node3D" unique_id=1301357312]
+script = ExtResource("1_6xmxd")
+
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=1187122329]
+mesh = SubResource("PlaneMesh_ubtyr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1572945930]
+transform = Transform3D(0.8660254, -0.3535534, 0.3535534, 0, 0.7071068, 0.7071068, -0.5, -0.61237246, 0.61237246, 0, 0, 0)
+light_color = Color(1, 1, 0.84705883, 1)
+light_energy = 0.7
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1700570047]
+environment = SubResource("Environment_ubtyr")
+
+[node name="Terrain" type="GridMap" parent="." unique_id=1315701277]
+
+[node name="Resources" type="Node3D" parent="." unique_id=629556715]
+
+[node name="Villages" type="Node3D" parent="." unique_id=1873158974]
+
+[node name="Village" parent="Villages" unique_id=1174593739 instance=ExtResource("2_tcf2h")]
+
+[node name="WorldGrid" type="Node" parent="." unique_id=1367215719]
+script = ExtResource("3_4717r")

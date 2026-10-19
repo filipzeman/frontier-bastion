@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ou8411uf11qb"]
+
+[ext_resource type="Script" uid="uid://pjabyst4e58f" path="res://ui/hud/resource_item.gd" id="1_2mjvb"]
+[ext_resource type="Texture2D" uid="uid://dvpxs3u0oq805" path="res://assets/resources/wood_resource.png" id="1_ae44l"]
+
+[node name="ResourceItem" type="HBoxContainer" unique_id=217294006]
+custom_minimum_size = Vector2(75, 32)
+theme_override_constants/separation = 6
+script = ExtResource("1_2mjvb")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1489095249]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_ae44l")
+stretch_mode = 3
+
+[node name="Amount" type="Label" parent="." unique_id=1052512195]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "100"

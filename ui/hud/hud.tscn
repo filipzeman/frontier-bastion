@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://br151o8u5w341"]
+
+[ext_resource type="Theme" uid="uid://msdnauaj3bml" path="res://ui/themes/theme.tres" id="1_4d6w6"]
+[ext_resource type="PackedScene" uid="uid://ou8411uf11qb" path="res://ui/hud/resource_item.tscn" id="2_e0nub"]
+[ext_resource type="Texture2D" uid="uid://dvpxs3u0oq805" path="res://assets/resources/wood_resource.png" id="3_w75iv"]
+[ext_resource type="Texture2D" uid="uid://c2627i7kyofpi" path="res://assets/resources/Icons_27_11.png" id="4_imuuq"]
+[ext_resource type="Texture2D" uid="uid://187mvq1p76cs" path="res://assets/resources/iron_resource.png" id="5_kwc50"]
+[ext_resource type="Script" uid="uid://bf48c4umao3v7" path="res://ui/hud/hud.gd" id="6_hud"]
+
+[node name="HUD" type="CanvasLayer" unique_id=579940240]
+script = ExtResource("6_hud")
+
+[node name="Root" type="Control" parent="." unique_id=79741043]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_4d6w6")
+
+[node name="Layout" type="MarginContainer" parent="Root" unique_id=1940516434]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Layout" unique_id=881577375]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TopBar" type="PanelContainer" parent="Root/Layout/VBoxContainer" unique_id=877688575]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Root/Layout/VBoxContainer/TopBar" unique_id=1641161681]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="VillageInfo" type="VBoxContainer" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer" unique_id=514103953]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="VillageName" type="Label" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/VillageInfo" unique_id=1114773607]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9019608, 0.8784314, 0.8352941, 1)
+theme_override_font_sizes/font_size = 17
+text = "Oak Village"
+
+[node name="VillageStatus" type="Label" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/VillageInfo" unique_id=2145717448]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6627451, 0.6431373, 0.6039216, 1)
+theme_override_font_sizes/font_size = 12
+text = "Malá osada"
+
+[node name="VSeparator" type="VSeparator" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer" unique_id=1937173418]
+layout_mode = 2
+
+[node name="Resources" type="HBoxContainer" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer" unique_id=1128409970]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="Wood" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/Resources" unique_id=217294006 instance=ExtResource("2_e0nub")]
+layout_mode = 2
+alignment = 1
+resource_icon = ExtResource("3_w75iv")
+resource_amount = 20
+
+[node name="Stone" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/Resources" unique_id=2099346910 instance=ExtResource("2_e0nub")]
+layout_mode = 2
+alignment = 1
+resource_icon = ExtResource("4_imuuq")
+resource_amount = 20
+
+[node name="Iron" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/Resources" unique_id=1181316340 instance=ExtResource("2_e0nub")]
+layout_mode = 2
+alignment = 1
+resource_icon = ExtResource("5_kwc50")
+
+[node name="Spacer" type="Control" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer" unique_id=165190082]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Population" type="HBoxContainer" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer" unique_id=2030687787]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 9
+
+[node name="Icon" type="TextureRect" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/Population" unique_id=1952934417]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+
+[node name="Count" type="Label" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/Population" unique_id=1583865358]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "3"
+
+[node name="TimeInfo" type="HBoxContainer" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer" unique_id=1350397641]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Season" type="Label" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/TimeInfo" unique_id=49355662]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 17
+text = "Jaro"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/TimeInfo" unique_id=1385531890]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="Day" type="Label" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/TimeInfo/VBoxContainer" unique_id=924151123]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Den 12"
+
+[node name="Phase" type="Label" parent="Root/Layout/VBoxContainer/TopBar/HBoxContainer/TimeInfo/VBoxContainer" unique_id=1694018771]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6627451, 0.6431373, 0.6039216, 1)
+theme_override_font_sizes/font_size = 12
+text = "Ráno"
+
+[node name="Content" type="HBoxContainer" parent="Root/Layout/VBoxContainer" unique_id=912078752]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="Sidebar" type="PanelContainer" parent="Root/Layout/VBoxContainer/Content" unique_id=486460288]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Layout/VBoxContainer/Content/Sidebar" unique_id=1348447488]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="OverviewButton" type="Button" parent="Root/Layout/VBoxContainer/Content/Sidebar/VBoxContainer" unique_id=1412241048]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9019608, 0.8784314, 0.8352941, 1)
+text = "OV"
+
+[node name="BuildButton" type="Button" parent="Root/Layout/VBoxContainer/Content/Sidebar/VBoxContainer" unique_id=1993521550]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.9019608, 0.8784314, 0.8352941, 1)
+text = "BL"
+icon_alignment = 1
+expand_icon = true
+
+[node name="VillagersButton" type="Button" parent="Root/Layout/VBoxContainer/Content/Sidebar/VBoxContainer" unique_id=1984099512]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9019608, 0.8784314, 0.8352941, 1)
+text = "VI"
+
+[node name="EconomyButton" type="Button" parent="Root/Layout/VBoxContainer/Content/Sidebar/VBoxContainer" unique_id=1237368234]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9019608, 0.8784314, 0.8352941, 1)
+text = "EC"
+
+[node name="SettingsButton" type="Button" parent="Root/Layout/VBoxContainer/Content/Sidebar/VBoxContainer" unique_id=1667727513]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9019608, 0.8784314, 0.8352941, 1)
+text = "SET"
+
+[node name="WorldArea" type="Control" parent="Root/Layout/VBoxContainer/Content" unique_id=2044231262]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer" type="Control" parent="Root/Layout/VBoxContainer" unique_id=1774437990]
+layout_mode = 2

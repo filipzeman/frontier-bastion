@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://xamjputel5nt"]
+
+[ext_resource type="PackedScene" uid="uid://b61jlp4p1djse" path="res://assets/buildings/village_center.fbx" id="1_3weh5"]
+[ext_resource type="Script" uid="uid://cfs3e436wogou" path="res://village/buildings/building.gd" id="1_r0r8h"]
+[ext_resource type="Resource" uid="uid://dqdvt7h47xqc3" path="res://village/buildings/definitions/village_center.tres" id="2_nbpqw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i8puu"]
+albedo_color = Color(0.39336982, 0.25357786, 0.11182053, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sj5s8"]
+size = Vector3(10.518066, 10.410645, 7.606201)
+
+[node name="VillageCenter" type="StaticBody3D" unique_id=1307455859]
+script = ExtResource("1_r0r8h")
+building_data = ExtResource("2_nbpqw")
+
+[node name="village_center" parent="." unique_id=437972222 instance=ExtResource("1_3weh5")]
+
+[node name="Building-4" parent="village_center" index="0" unique_id=484689345]
+visible = false
+
+[node name="Building-1" parent="village_center" index="1" unique_id=619856445]
+transform = Transform3D(61.290688, 79.0155, 3.4538773e-06, 0, -4.3711384e-06, 99.99999, 79.01551, -61.290684, -2.6791008e-06, 0.39648914, 0.26961243, -0.6647258)
+surface_material_override/0 = SubResource("StandardMaterial3D_i8puu")
+
+[node name="Building-2" parent="village_center" index="2" unique_id=880782666]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=297880949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9765625, 4.7053223, -0.31140137)
+shape = SubResource("BoxShape3D_sj5s8")
+
+[editable path="village_center"]

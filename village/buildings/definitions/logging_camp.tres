@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BuildingData" format=3 uid="uid://briilkrjfe3kq"]
+
+[ext_resource type="Script" uid="uid://dkwb2bw1ipk6b" path="res://village/buildings/definitions/building_data.gd" id="1_vbnqk"]
+
+[resource]
+script = ExtResource("1_vbnqk")
+type = "logging_camp"
+name = "Logging Camp"
+description = "A logging camp is a place where lumberjacks work to cut down trees"
+max_workers = 2
+assignment = 6
+construction_time = 12.0
+wood_cost = 10
+footprint = Vector2i(2, 2)
+metadata/_custom_type_script = "uid://dkwb2bw1ipk6b"

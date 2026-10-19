@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ResourceData" format=3 uid="uid://d2greoxiqg7r7"]
+
+[ext_resource type="Script" uid="uid://cv546u6mhusld" path="res://world/deposits/resource_data.gd" id="1_qr8ub"]
+
+[resource]
+script = ExtResource("1_qr8ub")
+name = "Stone Rock"
+max_amount = 120
+metadata/_custom_type_script = "uid://cv546u6mhusld"
