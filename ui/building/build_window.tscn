@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bwy30t3ebtdmx"]
+
+[ext_resource type="PackedScene" uid="uid://c3w8hlwb2ganl" path="res://ui/windows/game_window.tscn" id="1_kay2n"]
+[ext_resource type="Script" uid="uid://dnq0ldffkhwv8" path="res://ui/building/build_window.gd" id="2_i5541"]
+[ext_resource type="Resource" uid="uid://bm23vqfh3c4t4" path="res://village/buildings/building_catalog.tres" id="3_idyvs"]
+
+[node name="BuildWindow" unique_id=2126950432 instance=ExtResource("1_kay2n")]
+offset_left = -1.0
+offset_right = 849.0
+offset_bottom = 550.0
+script = ExtResource("2_i5541")
+building_catalog = ExtResource("3_idyvs")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Content" parent_id_path=PackedInt32Array(1835060109) index="0" unique_id=279361519]
+layout_mode = 2
+
+[node name="Categories" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Content/VBoxContainer" index="0" unique_id=1121175612]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+
+[node name="AllButton" type="Button" parent="MarginContainer/VBoxContainer/Content/VBoxContainer/Categories" index="0" unique_id=1789632059]
+layout_mode = 2
+text = "All
+"
+
+[node name="HousingButton" type="Button" parent="MarginContainer/VBoxContainer/Content/VBoxContainer/Categories" index="1" unique_id=1229011809]
+layout_mode = 2
+text = "Housing"
+
+[node name="ProductionButton" type="Button" parent="MarginContainer/VBoxContainer/Content/VBoxContainer/Categories" index="2" unique_id=485868997]
+layout_mode = 2
+text = "Production"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/Content/VBoxContainer" index="1" unique_id=684377097]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BuildingGrid" type="GridContainer" parent="MarginContainer/VBoxContainer/Content/VBoxContainer/ScrollContainer" index="0" unique_id=819621863]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 3

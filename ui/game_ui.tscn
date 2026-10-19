@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b4yhlt5gqqvb3"]
+
+[ext_resource type="Script" uid="uid://bsapejfmtk12f" path="res://ui/game_ui.gd" id="1_7hrjk"]
+[ext_resource type="PackedScene" uid="uid://br151o8u5w341" path="res://ui/hud/hud.tscn" id="1_dcmab"]
+[ext_resource type="Script" uid="uid://carhmkjirb0bp" path="res://ui/windows/window_manager.gd" id="2_w46tp"]
+
+[node name="GameUI" type="CanvasLayer" unique_id=1793668600]
+script = ExtResource("1_7hrjk")
+
+[node name="Root" type="Control" parent="." unique_id=464138554]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HUD" parent="Root" unique_id=579940240 instance=ExtResource("1_dcmab")]
+layout_mode = 1
+
+[node name="WindowHost" type="Control" parent="Root" unique_id=1766080149]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_right = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_w46tp")
+
+[node name="Notifications" type="Control" parent="Root" unique_id=2095531121]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

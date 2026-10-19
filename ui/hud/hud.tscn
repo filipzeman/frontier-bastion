@@ -7,11 +7,18 @@
 [ext_resource type="Texture2D" uid="uid://187mvq1p76cs" path="res://assets/resources/iron_resource.png" id="5_kwc50"]
 [ext_resource type="Script" uid="uid://bf48c4umao3v7" path="res://ui/hud/hud.gd" id="6_hud"]
 
-[node name="HUD" type="CanvasLayer" unique_id=579940240]
+[node name="HUD" type="Control" unique_id=645647473]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("6_hud")
 
 [node name="Root" type="Control" parent="." unique_id=79741043]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -195,3 +202,5 @@ size_flags_horizontal = 3
 
 [node name="Spacer" type="Control" parent="Root/Layout/VBoxContainer" unique_id=1774437990]
 layout_mode = 2
+
+[connection signal="pressed" from="Root/Layout/VBoxContainer/Content/Sidebar/VBoxContainer/BuildButton" to="." method="_on_build_button_pressed"]

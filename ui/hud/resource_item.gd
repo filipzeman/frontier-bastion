@@ -1,4 +1,6 @@
 @tool
+class_name ResourceItem
+
 extends HBoxContainer
 
 @onready var icon: TextureRect = $Icon

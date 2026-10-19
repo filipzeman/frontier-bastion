@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BuildingData" format=3 uid="uid://cldo6s8yvm3jt"]
+
+[ext_resource type="Script" uid="uid://dkwb2bw1ipk6b" path="res://village/buildings/definitions/building_data.gd" id="1_72iv7"]
+
+[resource]
+script = ExtResource("1_72iv7")
+type = "stone_quary"
+name = "Stone Quary"
+description = "Building for gathering stone and product stone blocks"
+max_workers = 1
+assignment = 7
+construction_time = 12.0
+wood_cost = 10
+stone_cost = 5
+footprint = Vector2i(2, 2)
+metadata/_custom_type_script = "uid://dkwb2bw1ipk6b"

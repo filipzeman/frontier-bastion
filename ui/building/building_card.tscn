@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://btfxsb10ra72l"]
+
+[ext_resource type="Script" uid="uid://b52bw0oih826" path="res://ui/building/building_card.gd" id="1_ntisx"]
+[ext_resource type="Texture2D" uid="uid://dvpxs3u0oq805" path="res://assets/resources/wood_resource.png" id="2_i5eo0"]
+[ext_resource type="Texture2D" uid="uid://bbrfsy3gloqtp" path="res://assets/resources/stone_resource.png" id="3_4qw0s"]
+[ext_resource type="Texture2D" uid="uid://187mvq1p76cs" path="res://assets/resources/iron_resource.png" id="4_gw5k3"]
+
+[node name="BuildingCard" type="PanelContainer" unique_id=1335169434]
+custom_minimum_size = Vector2(200, 260)
+script = ExtResource("1_ntisx")
+wood_icon = ExtResource("2_i5eo0")
+stone_icon = ExtResource("3_4qw0s")
+iron_icon = ExtResource("4_gw5k3")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1613135482]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=982859002]
+layout_mode = 2
+
+[node name="Preview" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=259038100]
+custom_minimum_size = Vector2(160, 100)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1468662588]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="DescriptionLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=837695665]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 3
+
+[node name="Costs" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1872147119]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BuildButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2112248347]
+layout_mode = 2
+text = "Build"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BuildButton" to="." method="_on_build_button_pressed"]

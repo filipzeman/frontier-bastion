@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 @onready var top_bar = $Root/Layout/VBoxContainer/TopBar/HBoxContainer
 @onready var resource_items: Dictionary = {
@@ -10,6 +10,8 @@ extends CanvasLayer
 @onready var season_label: Label = top_bar.get_node("TimeInfo/Season")
 @onready var day_label: Label = top_bar.get_node("TimeInfo/VBoxContainer/Day")
 @onready var phase_label: Label = top_bar.get_node("TimeInfo/VBoxContainer/Phase")
+
+signal build_menu_requested
 
 
 func _ready() -> void:
@@ -36,3 +38,7 @@ func _update_calendar() -> void:
 	season_label.text = GameState.get_season_name()
 	day_label.text = "Day %d" % GameState.get_current_day()
 	phase_label.text = GameState.get_day_phase().capitalize()
+	
+func _on_build_button_pressed() -> void:
+	build_menu_requested.emit()
+	print('clicked on build menu')

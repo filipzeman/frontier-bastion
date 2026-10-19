@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BuildingCatalog" format=3 uid="uid://bm23vqfh3c4t4"]
+
+[ext_resource type="Script" uid="uid://dkwb2bw1ipk6b" path="res://village/buildings/definitions/building_data.gd" id="1_fq05r"]
+[ext_resource type="Resource" uid="uid://briilkrjfe3kq" path="res://village/buildings/definitions/logging_camp.tres" id="2_rwcsj"]
+[ext_resource type="Script" uid="uid://bsg6gtf285nle" path="res://village/buildings/building_catalog.gd" id="3_27vjn"]
+[ext_resource type="Resource" uid="uid://cldo6s8yvm3jt" path="res://village/buildings/definitions/stone_quary.tres" id="3_rwcsj"]
+
+[resource]
+script = ExtResource("3_27vjn")
+buildings = Array[ExtResource("1_fq05r")]([ExtResource("2_rwcsj"), ExtResource("3_rwcsj")])
+metadata/_custom_type_script = "uid://bsg6gtf285nle"

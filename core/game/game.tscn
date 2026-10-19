@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://crmdb24injh8l" path="res://core/game/game.gd" id="1_4gkfv"]
 [ext_resource type="PackedScene" uid="uid://ho2nveak3mn7" path="res://world/world.tscn" id="1_23swt"]
-[ext_resource type="PackedScene" uid="uid://br151o8u5w341" path="res://ui/hud/hud.tscn" id="2_dfm4s"]
+[ext_resource type="PackedScene" uid="uid://b4yhlt5gqqvb3" path="res://ui/game_ui.tscn" id="3_4gkfv"]
 
 [node name="Game" type="Node3D" unique_id=1309773171]
 script = ExtResource("1_4gkfv")
@@ -17,4 +17,4 @@ projection = 1
 current = true
 size = 50.0
 
-[node name="HUD" parent="." unique_id=579940240 instance=ExtResource("2_dfm4s")]
+[node name="GameUi" parent="." unique_id=1793668600 instance=ExtResource("3_4gkfv")]
